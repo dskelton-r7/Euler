@@ -138,9 +138,25 @@ Euler.Problems[2] = function(){
 */
 
 
-Euler.Problems[3] = function(){}
+Euler.Problems[3] = function(){
 
+	var min = 100, max = 999, sum, largest = 0;
 
+	for(var i = min, k = max; i <= k; i++){
+		for(var x = i, y = max; x <= y; x++){
+
+			sum = (i * x).toString();
+			
+			if( sum.isAPalindrome() ){
+				palindrome = parseInt(sum);
+				if(largest < palindrome) largest = palindrome;
+			}
+		}
+	}
+
+	return largest;
+
+};
 
 
 Euler.Problems.forEach(function( problem, i ){

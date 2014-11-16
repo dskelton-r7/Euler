@@ -1,6 +1,13 @@
 <html>
 	<head></head>
 	<body>
+		
+		<script type="text/javascript">
+			String.prototype.isAPalindrome = function(){
+				return this == this.split('').reverse().join('');
+			};
+		</script>
+
 		<script src="euler.js"></script>
 	</body>
 </html>
